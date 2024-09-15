@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        body{
+            background-image: url('C:/Users/jawa0/OneDrive/Desktop/internship projects/img/image.jpg');
+            background-size: cover;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Congratulations!</h2>
+        <p id="welcomeMessage">You have successfully registered.</p>
+        <a href="index2.html">Go to Home</a> 
+    </div>
+
+    <script>
+        
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('username');
+        if (username) {
+            document.getElementById('welcomeMessage').innerText = `Congratulations, ${username}! You have successfully registered.`;
+        }
+    </script>
+</body>
+</html>
